@@ -15,37 +15,42 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Home"),
-        backgroundColor: Colors.white
+        backgroundColor: Colors.purple,
+        titleTextStyle: const TextStyle(color: Colors.white,
+        fontSize: 24),
+        
         ),
-        body: Center(
-          child: Container(
-            padding: const EdgeInsets.all(8),
-            alignment: Alignment.center,
-            height: 99,
-            width: 99,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: const [
-                BoxShadow(
-                  color: Colors.grey,
-                  blurRadius: 5,
-                  offset: Offset(2.1, 4.9)
-
-                )
+        body: Container(
+          color: Colors.black,
+          width:MediaQuery.of(context).size.width,
+          height:MediaQuery.of(context).size.height/2,
+          child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget> [
+               Container(
+              padding: const EdgeInsets.all(8),
+              height: 99,
+              width: 99,
+              color: Colors.red,
+            ), 
+            Container(
+              padding: const EdgeInsets.all(8),
+              height: 99,
+              width: 99,
+              color: Colors.blue,
+            ), 
+            Container(
+              padding: const EdgeInsets.all(8),
+              height: 99,
+              width: 99,
+              color: Colors.green,
+            ), 
+            
+            
               ],
-              gradient: const LinearGradient(
-                colors: [Colors.pink, Colors.red, Colors.orange]
-              )
             ),
-            child: const Text("Assalam u aliakum",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 18,
-              fontWeight: FontWeight.w300
-            ),),
-          ),
-        ),
+        )
         );
   }
 }
